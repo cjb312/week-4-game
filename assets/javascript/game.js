@@ -1,32 +1,29 @@
 $(document).ready(function () {
-	// variables
-	// calcuates a random number between 19 and 120
-	var randomNumber = Math.floor(Math.random()*101) + 19;
+	// creating a random number between 19 and 120
+	var goal = Math.floor(Math.random()*101) + 19;
 	var crystalValues = [0,0,0,0];
-		// assigns random numbers between 1 and 12 for each crystal in the array
+		//creating the crystal values to be randomized with numbers 1-12
 		for (var i=0; i < crystalValues.length; i++) {
 			crystalValues[i] = Math.floor(Math.random()*12) + 1;
 		}
-	// total score based on button choices
 	var totalScore = 0;
-	// wins and losses
 	var wins = 0;
 	var losses = 0;
 
-	// assigning random values created to the buttons
+
 	$('#blueCrystal').val(crystalValues[0]);
 	$('#redCrystal').val(crystalValues[1]);
 	$('#orangeCrystal').val(crystalValues[2]); 
 	$('#greenCrystal').val(crystalValues[3]);
 
-	// function for win and loss results
+	// function for win and loss results including the modal alerts that are bootstrapped
 	function results() {
-		if (totalScore == randomNumber) {
+		if (totalScore == goal) {
 			wins++;
 			$('#myWinModal').modal('show');
 			$("#wins").html(wins);
 			reset();
-		} else if (totalScore > randomNumber) {
+		} else if (totalScore > goal) {
 			$("#totalScore").html(totalScore);
 			losses++;
 			$('#myLossModal').modal('show');
@@ -37,8 +34,8 @@ $(document).ready(function () {
 
 	// function for resetting the game
 	function reset() {
-		randomNumber = Math.floor(Math.random()*101) + 19;
-		$("#randomNumber").html(randomNumber);
+		goal = Math.floor(Math.random()*101) + 19;
+		$("#goal").html(goal);
 		for (var i=0; i < crystalValues.length; i++) {
 			crystalValues[i] = Math.floor(Math.random()*12) + 1;
 		}
@@ -46,7 +43,7 @@ $(document).ready(function () {
 		$("#totalScore").html(totalScore);
 	};
 
-	// generate a random number for each crystal clicked
+	// random number for each crystal clicked
 	$("#blueCrystal").on("click", function(){
 		totalScore = totalScore + crystalValues[0];
 		$("#totalScore").html(totalScore);
@@ -69,7 +66,7 @@ $(document).ready(function () {
 	});
 
 	// variables pushed into html page
-	$("#randomNumber").html(randomNumber);
+	$("#goal").html(goal);
 	$("#totalScore").html(totalScore);
 	$("#wins").html(wins);
 	$("#losses").html(losses);

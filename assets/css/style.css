@@ -7,6 +7,9 @@
   font-family: 'Bungee Inline', cursive;
 }
 
+body {
+  background-image:url('../images/crystalbg.jpg');
+}
 .modal-header {
 	background-color: silver;
 	border-radius: 6px 6px 0px 0px;

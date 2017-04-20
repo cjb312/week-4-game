@@ -6,8 +6,8 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<style>
-@import url('https://fonts.googleapis.com/css?family=Bungee+Inline');
-</style>
+		@import url('https://fonts.googleapis.com/css?family=Bungee+Inline');
+	</style>
 </head>
 <body>
 
@@ -16,11 +16,11 @@
 		<br>
  		<div class="jumbotron">
     		<h1>Crystal Collector</h1>
+    		<hr>
     			<p>A random number will be generated at the start of the game.</p>
-    			<p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
-    			<p>You win the game by matching your total score to the random number, you lose the game if your total score goes above the random number.</p>
+    			<p>There are four crystals below with randomized values at the start of each game. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+    			<p>You win the game by matching your total score to the number displayed under goal, you lose the game if your total score goes above the goal number.</p>
     			<p>The value of each crystal is hidden from you until you click on it.</p>
-    			<p>Each time when the game starts, the game will change the value of each crystal</p>
   		</div>
 	</div>
 
@@ -28,9 +28,9 @@
 	<div class="container">
 		<div class="row">		
 			<div class="col-md-2" align="center">
-				<p>Random Number</p>
+				<p>Goal</p>
 				<hr>
-				<h1 id="randomNumber"></h1>
+				<h1 id="goal"></h1>
 			</div>
 
 
@@ -57,13 +57,13 @@
 		<!-- scoreboard -->
 		<div class="row">
 			<br>
-			<div class="col-md-2"></div>
+			<div class="col-md-3"></div>
 			<div class="col-md-3" align="center">
 				<p>Wins</p>
 				<hr>
 				<p id="wins"></p>
 			</div>
-			<div class="col-md-2" align="left">
+			<div class="col-md-3" align="left">
 				<p>Losses</p>
 				<hr>
 				<p id="losses"></p>
@@ -118,7 +118,7 @@
     </footer>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<!-- bootstrap for modals -->
+	<!-- bootstrap for modals. they use js so link is at the bottom of the body -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 	<script type="text/javascript" src="assets/javascript/game.js"></script>
