@@ -1,0 +1,38 @@
+.container .jumbotron {
+	text-align: center;
+}
+
+.container {
+  color: #0000ff;
+  font-family: 'Bungee Inline', cursive;
+}
+
+.modal-header {
+	background-color: silver;
+	border-radius: 6px 6px 0px 0px;
+}
+
+.modal-footer {
+  background-color:silver;
+  border-radius:6px 6px 0px 0px;
+}
+
+
+.modal {
+  text-align: center;
+  padding: 0!important;
+}
+
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 71%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
